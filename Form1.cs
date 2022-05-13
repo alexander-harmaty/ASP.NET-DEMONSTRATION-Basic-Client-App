@@ -37,11 +37,22 @@ namespace MyClientApp
             WebServicesSettings();
         }
 
+        private DataTable stringSplit(string userJson)
+        {
+            string[] json = userJson.Split('>');
+            string[] finalJson = json[2].Split('<');
+
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(finalJson[0]);
+            return dt;
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             HttpResponseMessage message = client.GetAsync("dataTableForUsers?id=" + textBoxID.Text + "").Result;
             string userJson = message.Content.ReadAsStringAsync().Result;
-            MessageBox.Show(userJson);
+            //MessageBox.Show(userJson);
+
+            dataGridView1.DataSource = stringSplit(userJson);
         }
     }
 }
