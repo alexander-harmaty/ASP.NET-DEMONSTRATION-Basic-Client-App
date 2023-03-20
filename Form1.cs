@@ -46,13 +46,13 @@ namespace MyClientApp
         //    return dt;
         //}
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //HttpResponseMessage message = client.GetAsync("dataTableForUsers?id=" + textBoxID.Text + "").Result;
-            //string userJson = message.Content.ReadAsStringAsync().Result;
-            ////MessageBox.Show(userJson);
+        //private void btnSearch_Click(object sender, EventArgs e)
+        //{
+        //    HttpResponseMessage message = client.GetAsync("dataTableForUsers?id=" + textBoxID.Text + "").Result;
+        //    string userJson = message.Content.ReadAsStringAsync().Result;
+        //    //MessageBox.Show(userJson);
 
-            //dataGridView1.DataSource = stringSplit(userJson);
-        }
+        //    dataGridView1.DataSource = stringSplit(userJson);
+        //}
     }
 }
