@@ -20,5 +20,5 @@ calculating sums, and presenting a list of countries.
 On the client side app, countries list data is passed to the client via JSON and HttpGet 
 where users are then able to present it in an organized table on a form. 
 
-##Output
+## Output
 ![output](images/output.png)
